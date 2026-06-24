@@ -8,33 +8,39 @@
 	</head>
 	<body>
 		<main>
-			<div class="page top active">
+			<div>
 				<hgroup>
 					<h2 class="italic">MakerCenter</h2>
 					<em>"Build what you have. Find what you don't."</em>
 				</hgroup>
 			</div>
 
-			<div>
-				<aside class="left small-width small-height padding">
-					<img class="responsive" src="/src/assets/hero.jpg" />
-				</aside>
-				<h5>Welcome!</h5>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur.
-				</p>
+			<div class="page right active">
+				<article class="no-padding border">
+					<img
+						class="responsive small"
+						src="/src/assets/projects/1.jpg"
+					/>
+					<div class="padding">
+						<h5>
+							Automated Irrigation System / Soil Moisture
+							Monitoring System
+						</h5>
+						<p>
+							A way to automate and monitor whether your plants have received enough water.
+						</p>
+						<nav>
+							<button>Learn</button>
+						</nav>
+					</div>
+				</article>
 			</div>
 
+			<div id="error"></div>
+
+			<br /><br />
 			<div class="onboardingNav">
-				<button
-					class="ripple responsive round fill large"
-					onclick="window.location.href = 'onboardingInventory'"
-				>
+				<button class="ripple responsive round fill large" onclick="window.location.href = 'home'">
 					<i>arrow_forward</i>
 					<span>Next</span>
 				</button>
@@ -47,12 +53,12 @@
 					</div>
 					<hr class="max" />
 					<div class="center-align">
-						<button class="circle small">2</button>
+						<button class="fill circle small"><i>done</i></button>
 						<div class="small-margin">Inventory</div>
 					</div>
 					<hr class="max" />
 					<div class="center-align">
-						<button class="circle small" disabled>3</button>
+						<button class="fill circle small"><i>done</i></button>
 						<div class="small-margin">Projects</div>
 					</div>
 				</nav>
@@ -74,4 +80,12 @@
 	></script>
 	<link rel="stylesheet" href="/src/beercssTheme.css" />
 	<link rel="stylesheet" href="/src/style.css" />
+
+	<script src="src/main.ts"></script>
+	<script src="src/onboardingInventory.ts"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+	<script>
+		eruda.init();
+	</script>
 </html>

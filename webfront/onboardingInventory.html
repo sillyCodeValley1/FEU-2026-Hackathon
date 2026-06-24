@@ -10,13 +10,13 @@
 		<main>
 			<div>
 				<hgroup>
-					<h2 class="italic">AppName</h2>
-					Your tagline here
+					<h2 class="italic">MakerCenter</h2>
+					<em>"Build what you have. Find what you don't."</em>
 				</hgroup>
 			</div>
 
 			<div class="page right active">
-				<fieldset>
+				<fieldset id="partsList">
 					<legend>Fill out your materials</legend>
 					<div class="row">
 						<div class="max">
@@ -35,36 +35,22 @@
 					</div>
 				</fieldset>
 
+				<div id="notif"></div>
+
 				<br />
 				<button
-					command="show-modal"
-					commandfor="onboardingaterialsModal"
-					id="onboardingAddMaterial"
+					id="addMaterial"
 					class="square round extra primary absolute right"
 				>
 					<i>add</i>
 				</button>
 			</div>
 
-			<div class="overlay blur"></div>
-			<dialog id="onboardingaterialsModal">
-				<h5>Custom overlay</h5>
-				<div>Some text here</div>
-				<nav class="right-align no-space">
-					<button
-						class="transparent link"
-						command="close-modal"
-						commandfor="onboardingaterialsModal"
-					>
-						Cancel
-					</button>
-					<button class="transparent link">Confirm</button>
-				</nav>
-			</dialog>
+			<div id="error"></div>
 
 			<br /><br />
 			<div class="onboardingNav">
-				<button class="ripple responsive round fill large">
+				<button class="ripple responsive round fill large" onclick="window.location.href = 'onboardingProjects'">
 					<i>arrow_forward</i>
 					<span>Next</span>
 				</button>
@@ -82,7 +68,7 @@
 					</div>
 					<hr class="max" />
 					<div class="center-align">
-						<button class="circle small" disabled>3</button>
+						<button class="circle small">3</button>
 						<div class="small-margin">Projects</div>
 					</div>
 				</nav>
@@ -106,4 +92,10 @@
 	<link rel="stylesheet" href="/src/style.css" />
 
 	<script src="src/main.ts"></script>
+	<script src="src/onboardingInventory.ts"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+	<script>
+		eruda.init();
+	</script>
 </html>
