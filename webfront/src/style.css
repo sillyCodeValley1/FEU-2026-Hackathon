@@ -1,0 +1,14 @@
+.onboardingNav {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+.nextButtonPin {
+color: red;
+position: fixed;
+bottom: 1;
+left: 0;
+right: 0;
+}

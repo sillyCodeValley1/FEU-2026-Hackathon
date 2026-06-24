@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="dim">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>sillyCodeValley</title>
+	</head>
+	<body>
+		<main>
+			<div>
+				<hgroup>
+					<h2 class="italic">AppName</h2>
+					Your tagline here
+				</hgroup>
+			</div>
+
+			<div class="page right active">
+				<fieldset>
+					<legend>Fill out your materials</legend>
+					<div class="row">
+						<div class="max">
+							<div class="field label prefix border">
+								<i>search</i>
+								<input type="text" />
+								<label>Part Name</label>
+							</div>
+						</div>
+						<div class="max">
+							<div class="field border label">
+								<input id="number" type="number" />
+								<label>Quantity</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<br />
+				<button
+					command="show-modal"
+					commandfor="onboardingaterialsModal"
+					id="onboardingAddMaterial"
+					class="square round extra primary absolute right"
+				>
+					<i>add</i>
+				</button>
+			</div>
+
+			<div class="overlay blur"></div>
+			<dialog id="onboardingaterialsModal">
+				<h5>Custom overlay</h5>
+				<div>Some text here</div>
+				<nav class="right-align no-space">
+					<button
+						class="transparent link"
+						command="close-modal"
+						commandfor="onboardingaterialsModal"
+					>
+						Cancel
+					</button>
+					<button class="transparent link">Confirm</button>
+				</nav>
+			</dialog>
+
+			<br /><br />
+			<div class="onboardingNav">
+				<button class="ripple responsive round fill large">
+					<i>arrow_forward</i>
+					<span>Next</span>
+				</button>
+				<nav>
+					<div class="center-align">
+						<button class="fill circle small">
+							<i>done</i>
+						</button>
+						<div class="small-margin">Welcome</div>
+					</div>
+					<hr class="max" />
+					<div class="center-align">
+						<button class="fill circle small"><i>done</i></button>
+						<div class="small-margin">Inventory</div>
+					</div>
+					<hr class="max" />
+					<div class="center-align">
+						<button class="circle small" disabled>3</button>
+						<div class="small-margin">Projects</div>
+					</div>
+				</nav>
+			</div>
+		</main>
+	</body>
+
+	<link
+		href="https://cdn.jsdelivr.net/npm/beercss@4.0.21/dist/cdn/beer.min.css"
+		rel="stylesheet"
+	/>
+	<script
+		type="module"
+		src="https://cdn.jsdelivr.net/npm/beercss@4.0.21/dist/cdn/beer.min.js"
+	></script>
+	<script
+		type="module"
+		src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"
+	></script>
+	<link rel="stylesheet" href="/src/beercssTheme.css" />
+	<link rel="stylesheet" href="/src/style.css" />
+
+	<script src="src/main.ts"></script>
+</html>
