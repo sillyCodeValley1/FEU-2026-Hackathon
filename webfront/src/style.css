@@ -28,32 +28,38 @@ h1, h2, h3, h4, .brand-title {
     font-size: 0.85rem;
 }
 
-/*LAYOUT & POSITIONING FIXES */
+/*  LAYOUT & POSITIONING  */
 
 .onboardingNav {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 64px; /* Explicit height to prevent overlapping */
     background: var(--surface-container);
     z-index: 100;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 8px 16px;
+    gap: 12px;
 }
 
-/* Pinning the "Next" button above the bottom nav for better UX */
-.nextButtonPin {
-    position: fixed;
-    bottom: 80px; /* Pushes the button cleanly above the 64px bottom nav */
-    left: 16px;
-    right: 16px;
-    z-index: 90;
+/* Navigation match the Circuit Rocks pill-shape look */
+.onboardingNav nav {
+    position: relative !important;
+    width: 100%;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 0;
+    padding: 0;
 }
 
-/* Making your buttons match the Circuit Rocks pill-shape look */
+/* Buttons match the Circuit Rocks pill-shape look */
 .btn, button {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-    border-radius: 100px; /* Clean pill shape seen in your UI */
+    border-radius: 100px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
